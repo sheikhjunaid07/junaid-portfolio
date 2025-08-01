@@ -20,7 +20,7 @@ const Resume = () => {
   const experience = [
     {
       title: "MERN Stack Intern",
-      company: "Ypsilon IT Solutions, Indore",
+      company: "Ypsilon IT Solutions Pvt Ltd, Indore",
       year: "January 2025 - Present",
       description:
         "Learned MERN Stack, JavaScript, Node, Express, React, and software development processes while writing clean code under senior guidance.",
@@ -35,10 +35,10 @@ const Resume = () => {
   ];
 
   const certifications = [
-    "AWS Certified Solutions Architect",
-    "Google Analytics Certified",
-    "MongoDB Certified Developer",
-    "Scrum Master Certification",
+    "Ypsilon IT Solutions (Internship)",
+    "MERN Stack Development (Universal Informatics)",
+    "Flutter Development (Internship)",
+    "JAVA Training (Code Mantra)",
   ];
 
   return (
@@ -49,39 +49,6 @@ const Resume = () => {
         </h2>
 
         <div className="grid lg:grid-cols-2 gap-8">
-          {/* Education */}
-          <Card className="gradient-card shadow-medium border-0">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-2xl">
-                <GraduationCap className="w-6 h-6 text-primary" />
-                Education
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              {education.map((item, index) => (
-                <div
-                  key={index}
-                  className="relative pl-6 border-l-2 border-primary/30"
-                >
-                  <div className="absolute -left-2 top-0 w-4 h-4 bg-primary rounded-full"></div>
-                  <div className="space-y-2">
-                    <h3 className="font-semibold text-foreground">
-                      {item.degree}
-                    </h3>
-                    <p className="text-primary font-medium">{item.school}</p>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <Calendar className="w-4 h-4" />
-                      {item.year}
-                    </div>
-                    <p className="text-sm text-muted-foreground">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </CardContent>
-          </Card>
-
           {/* Experience */}
           <Card className="gradient-card shadow-medium border-0">
             <CardHeader>
@@ -102,6 +69,39 @@ const Resume = () => {
                       {item.title}
                     </h3>
                     <p className="text-primary font-medium">{item.company}</p>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <Calendar className="w-4 h-4" />
+                      {item.year}
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          {/* Education */}
+          <Card className="gradient-card shadow-medium border-0">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-2xl">
+                <GraduationCap className="w-6 h-6 text-primary" />
+                Education
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              {education.map((item, index) => (
+                <div
+                  key={index}
+                  className="relative pl-6 border-l-2 border-primary/30"
+                >
+                  <div className="absolute -left-2 top-0 w-4 h-4 bg-primary rounded-full"></div>
+                  <div className="space-y-2">
+                    <h3 className="font-semibold text-foreground">
+                      {item.degree}
+                    </h3>
+                    <p className="text-primary font-medium">{item.school}</p>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
                       <Calendar className="w-4 h-4" />
                       {item.year}
