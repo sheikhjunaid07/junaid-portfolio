@@ -4,7 +4,7 @@ import {
   Linkedin,
   Facebook,
   Instagram,
-  ChevronDown,
+  // ChevronDown,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import profileImage from "@/assets/profile-hero.jpg";
