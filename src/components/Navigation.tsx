@@ -76,18 +76,6 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Contact Button */}
-          {/* <Button
-            className={`hidden md:inline-flex ${
-              isScrolled 
-                ? 'bg-primary text-primary-foreground hover:bg-primary/90' 
-                : 'bg-white text-primary hover:bg-white/90'
-            }`}
-            onClick={() => handleNavClick('#contact')}
-          >
-            Contact
-          </Button> */}
-
           {/* Mobile Menu Button */}
           <Button
             variant="ghost"
@@ -122,12 +110,6 @@ const Navigation = () => {
                   {item.name}
                 </a>
               ))}
-              {/* <Button
-                className="mt-4"
-                onClick={() => handleNavClick('#contact')}
-              >
-                Contact
-              </Button> */}
             </div>
           </div>
         )}
