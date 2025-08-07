@@ -130,7 +130,7 @@ const Hero = () => {
             isVisible ? "animate-fade-in-up" : "opacity-0"
           } delay-300`}
         >
-          <h1 className="text-5xl md:text-5xl font-bold mb-4 leading-tight">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
             Hi, I'm{" "}
             <span className="text-white drop-shadow-lg relative">
               Sheikh Junaid
