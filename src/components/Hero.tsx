@@ -137,37 +137,34 @@ const Hero = () => {
                 ?.scrollIntoView({ behavior: "smooth" })
             }
           >
-            About Me
+            <i className="fa-solid fa-circle-info"></i> About Me
           </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-white text-primary hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105 hover:shadow-2xl transform"
-            onClick={() =>
-              document
-                .getElementById("projects")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
-          >
-            View Projects
-          </Button>
+          <a href="/SheikhJunaidResume.pdf" download="SheikhJunaidResume.pdf">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white text-primary hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105 hover:shadow-2xl transform"
+            >
+              <i className="fa-solid fa-file-arrow-down"></i> Download Resume
+            </Button>
+          </a>
         </div>
 
         {/* Scroll indicator */}
-        <div
+        {/* <div
           className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 ${
             isVisible ? "animate-bounce" : "opacity-0"
           } delay-1500`}
         >
           <ChevronDown
-            className="w-8 h-8 text-white/60 cursor-pointer hover:text-white transition-colors duration-300"
+            className="w-8 h-8 text-white/60 cursor-pointer text-start hover:text-white transition-colors duration-300"
             onClick={() =>
               document
                 .getElementById("about")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
           />
-        </div>
+        </div> */}
       </div>
     </section>
   );
