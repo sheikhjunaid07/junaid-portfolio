@@ -129,7 +129,7 @@ const Hero = () => {
           } delay-1000`}
         >
           <Button
-            size="sm"
+            size="lg"
             className="bg-white text-primary hover:bg-white/90 transition-all duration-300 hover:scale-105 hover:shadow-2xl transform"
             onClick={() =>
               document
