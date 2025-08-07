@@ -4,13 +4,60 @@ import {
   Linkedin,
   Facebook,
   Instagram,
-  // ChevronDown,
+  ChevronDown,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import profileImage from "@/assets/profile-hero.jpg";
 import { useTheme } from "./theme-provider";
 
+const useTypewriter = (
+  words: string[],
+  typingSpeed = 120,
+  pauseTime = 1500
+) => {
+  const [text, setText] = useState("");
+  const [index, setIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const current = index % words.length;
+    const fullText = words[current];
+
+    let timeout = setTimeout(
+      () => {
+        setText((prev) =>
+          isDeleting
+            ? fullText.substring(0, prev.length - 1)
+            : fullText.substring(0, prev.length + 1)
+        );
+
+        if (!isDeleting && text === fullText) {
+          setIsDeleting(true);
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {}, pauseTime);
+        } else if (isDeleting && text === "") {
+          setIsDeleting(false);
+          setIndex((prev) => prev + 1);
+        }
+      },
+      isDeleting ? typingSpeed / 2 : typingSpeed
+    );
+
+    return () => clearTimeout(timeout);
+  }, [text, isDeleting, index, words]);
+
+  return text;
+};
+
 const Hero = () => {
+  const roles = [
+    "Full Stack Developer",
+    "Creative Coder",
+    "Reader",
+    "Tech Enthusiast",
+  ];
+  const typedText = useTypewriter(roles);
+  const [isDark, setIsDark] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -83,7 +130,7 @@ const Hero = () => {
             isVisible ? "animate-fade-in-up" : "opacity-0"
           } delay-300`}
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
+          <h1 className="text-5xl md:text-5xl font-bold mb-4 leading-tight">
             Hi, I'm{" "}
             <span className="text-white drop-shadow-lg relative">
               Sheikh Junaid
@@ -92,7 +139,7 @@ const Hero = () => {
           </h1>
         </div>
 
-        <div
+        {/* <div
           className={`${
             isVisible ? "animate-slide-in-right" : "opacity-0"
           } delay-500`}
@@ -101,7 +148,12 @@ const Hero = () => {
             Full Stack Developer passionate about creating amazing digital
             experiences
           </p>
-        </div>
+        </div> */}
+        <h1 className="text-xl md:text-2xl font-medium mb-6 h-10">
+          <span className="border-r-2 border-black dark:border-white pr-1 animate-blink">
+            {typedText}
+          </span>
+        </h1>
 
         <div
           className={`flex justify-center gap-4 mb-8 ${
@@ -137,34 +189,37 @@ const Hero = () => {
                 ?.scrollIntoView({ behavior: "smooth" })
             }
           >
-            <i className="fa-solid fa-circle-info"></i> About Me
+            About Me
           </Button>
-          <a href="/SheikhJunaidResume.pdf" download="SheikhJunaidResume.pdf">
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-primary hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105 hover:shadow-2xl transform"
-            >
-              <i className="fa-solid fa-file-arrow-down"></i> Download Resume
-            </Button>
-          </a>
+          <Button
+            size="lg"
+            variant="outline"
+            className="border-white text-primary hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105 hover:shadow-2xl transform"
+            onClick={() =>
+              document
+                .getElementById("projects")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            View Projects
+          </Button>
         </div>
 
         {/* Scroll indicator */}
-        {/* <div
+        <div
           className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 ${
             isVisible ? "animate-bounce" : "opacity-0"
           } delay-1500`}
         >
           <ChevronDown
-            className="w-8 h-8 text-white/60 cursor-pointer text-start hover:text-white transition-colors duration-300"
+            className="w-8 h-8 text-white/60 cursor-pointer hover:text-white transition-colors duration-300"
             onClick={() =>
               document
                 .getElementById("about")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
           />
-        </div> */}
+        </div>
       </div>
     </section>
   );
