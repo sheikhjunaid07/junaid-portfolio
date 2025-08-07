@@ -4,7 +4,7 @@ import {
   Linkedin,
   Facebook,
   Instagram,
-  ChevronDown,
+  // ChevronDown,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import profileImage from "@/assets/profile-hero.jpg";
@@ -139,16 +139,6 @@ const Hero = () => {
           </h1>
         </div>
 
-        {/* <div
-          className={`${
-            isVisible ? "animate-slide-in-right" : "opacity-0"
-          } delay-500`}
-        >
-          <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto">
-            Full Stack Developer passionate about creating amazing digital
-            experiences
-          </p>
-        </div> */}
         <h1 className="text-xl md:text-2xl font-medium mb-6 h-10">
           <span className="border-r-2 border-black dark:border-white pr-1 animate-blink">
             {typedText}
@@ -189,36 +179,17 @@ const Hero = () => {
                 ?.scrollIntoView({ behavior: "smooth" })
             }
           >
-            About Me
+            <i className="fa-solid fa-circle-info"></i> About Me
           </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-white text-primary hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105 hover:shadow-2xl transform"
-            onClick={() =>
-              document
-                .getElementById("projects")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
-          >
-            View Projects
-          </Button>
-        </div>
-
-        {/* Scroll indicator */}
-        <div
-          className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 ${
-            isVisible ? "animate-bounce" : "opacity-0"
-          } delay-1500`}
-        >
-          <ChevronDown
-            className="w-8 h-8 text-white/60 cursor-pointer hover:text-white transition-colors duration-300"
-            onClick={() =>
-              document
-                .getElementById("about")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
-          />
+          <a href="/SheikhJunaidResume.pdf" download="SheikhJunaidResume.pdf">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white text-primary hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105 hover:shadow-2xl transform"
+            >
+              <i className="fa-solid fa-file-arrow-down"></i> Download Resume
+            </Button>
+          </a>
         </div>
       </div>
     </section>
