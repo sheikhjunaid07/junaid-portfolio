@@ -74,7 +74,7 @@ const About = () => {
                     </div> */}
                   </div>
                   <div className="p-4 rounded-lg bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-105 transform cursor-default">
-                    <div className="text-2xl font-bold text-primary">2+</div>
+                    <div className="text-2xl font-bold text-primary">3+</div>
                     <div className="text-sm text-muted-foreground">
                       Projects Completed
                     </div>

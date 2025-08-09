@@ -129,47 +129,6 @@ const Skills = () => {
             </Card>
           ))}
         </div>
-
-        {/* Additional Skills Section */}
-        <Card
-          className={`gradient-card shadow-medium border-0 mt-8 transition-all duration-700 ${
-            isVisible ? "animate-fade-in" : "opacity-0"
-          } delay-1000`}
-        >
-          <CardHeader>
-            <CardTitle className="text-center text-2xl">
-              Additional Competencies
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid md:grid-cols-2 gap-6 text-center text-xl">
-              {[
-                {
-                  title: "Soft Skills",
-                  description:
-                    "Adaptability, Team Oriented, Problem Solving, Reader",
-                },
-                {
-                  title: "Languages",
-                  description: "English (Native), Hindi",
-                },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="space-y-2 p-4 rounded-lg hover:bg-secondary/50 transition-all duration-300 hover:scale-105 transform"
-                  style={{ animationDelay: `${index * 0.3 + 1.2}s` }}
-                >
-                  <h4 className="font-semibold text-foreground">
-                    {item.title}
-                  </h4>
-                  <p className="text-sm text-muted-foreground">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
       </div>
     </section>
   );
