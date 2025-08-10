@@ -19,7 +19,7 @@ const Projects = () => {
         "MongoDB",
         "Express JS",
         "Bootstrap",
-        "Vercel"
+        "Vercel",
       ],
       liveUrl: "https://the-shipping-war.vercel.app/",
       githubUrl: "https://github.com/sheikhjunaid07/the-shipping-war",
@@ -36,11 +36,11 @@ const Projects = () => {
       featured: true,
     },
     {
-      title: "Food Blogger",
+      title: "Testy Tales",
       description:
         "A modern Food Blog website with smooth animations, responsive design where you can see food reviews,suggested good places for great food",
       image: project3Image,
-      technologies: ["HTML", "Bootstrap", "JavaScript", "MongoDB","Vercel"],
+      technologies: ["HTML", "Bootstrap", "JavaScript", "MongoDB", "Vercel"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com/username/project3",
       featured: false,
