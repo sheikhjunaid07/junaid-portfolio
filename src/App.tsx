@@ -13,7 +13,7 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider defaultTheme="light" storageKey="portfolio-theme">
       <TooltipProvider>
-        <Toaster />
+        <Toaster /> 
         <Sonner />
         <BrowserRouter>
           <Routes>

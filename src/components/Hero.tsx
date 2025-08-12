@@ -117,7 +117,7 @@ const Hero = () => {
           <div className="relative group">
             <img
               src={profileImage}
-              alt="Profile"
+              alt="Profile" 
               className="w-48 h-48 rounded-full object-cover shadow-large border-4 border-white/20 transition-all duration-500 group-hover:scale-110 group-hover:border-white/40"
             />
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/10 to-transparent group-hover:from-white/20 transition-all duration-500"></div>
@@ -165,7 +165,7 @@ const Hero = () => {
           ))}
         </div>
 
-        <div
+        <div 
           className={`flex flex-col sm:flex-row gap-4 justify-center ${
             isVisible ? "animate-fade-in" : "opacity-0"
           } delay-1000`}
