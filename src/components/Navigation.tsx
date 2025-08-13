@@ -48,7 +48,7 @@ const Navigation = () => {
               isScrolled ? "gradient-text" : "text-white"
             }`}
             onClick={(e) => {
-              e.preventDefault();
+              e.preventDefault(); 
               handleNavClick("#home");
             }}
           >
@@ -59,7 +59,7 @@ const Navigation = () => {
           <div className="hidden md:flex space-x-8">
             {navItems.map((item, index) => (
               <a
-                key={index}
+                key={index} 
                 href={item.href}
                 className={`transition-smooth hover:scale-105 ${
                   isScrolled
@@ -93,13 +93,13 @@ const Navigation = () => {
           </Button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu */} 
         {isMobileMenuOpen && (
           <div className="md:hidden bg-white shadow-medium rounded-lg mt-2 p-4">
             <div className="flex flex-col space-y-4">
               {navItems.map((item, index) => (
                 <a
-                  key={index}
+                  key={index} 
                   href={item.href}
                   className="text-foreground hover:text-primary transition-smooth px-2 py-1"
                   onClick={(e) => {

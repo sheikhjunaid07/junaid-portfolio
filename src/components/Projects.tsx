@@ -32,7 +32,7 @@ const Projects = () => {
       image: project2Image,
       technologies: ["Vue.js", "Express.js", "Socket.io", "PostgreSQL"],
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com/username/project2",
+      githubUrl: "https://github.com/sheikhjunaid07",
       featured: true,
     },
     {
@@ -42,7 +42,7 @@ const Projects = () => {
       image: project3Image,
       technologies: ["HTML", "Bootstrap", "JavaScript", "MongoDB", "Vercel"],
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com/username/project3",
+      githubUrl: "https://github.com/sheikhjunaid07",
       featured: false,
     },
   ];
@@ -58,7 +58,7 @@ const Projects = () => {
           experience in web development.
         </p>
 
-        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8" >
+        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Card
               key={index}
@@ -68,7 +68,7 @@ const Projects = () => {
             >
               <CardHeader className="p-0">
                 <div className="relative overflow-hidden rounded-t-lg">
-                  <img 
+                  <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-48 object-cover transition-smooth group-hover:scale-105"
