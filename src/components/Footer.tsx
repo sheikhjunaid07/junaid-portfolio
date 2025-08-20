@@ -41,7 +41,7 @@ const Footer = () => {
       href: "https://www.facebook.com/sheikh.junaid.0717",
       label: "Facebook",
     },
-    { icon: Mail, href: "mailto:contact@example.com", label: "Email" },
+    { icon: Mail, href: "mailto:sheikhjunaid732000@gmail.com", label: "Email" },
   ];
 
   const scrollToTop = () => {
