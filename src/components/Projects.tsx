@@ -31,7 +31,7 @@ const Projects = () => {
         "A responsive social media application with real-time messaging, post sharing, and user profiles. Features include likes, comments, and notifications.",
       image: project2Image,
       technologies: ["Vue.js", "Express.js", "Socket.io", "PostgreSQL"],
-      liveUrl: "https://example.com",
+      liveUrl: "https://the-shipping-war.vercel.app/",
       githubUrl: "https://github.com/sheikhjunaid07",
       featured: true,
     },
